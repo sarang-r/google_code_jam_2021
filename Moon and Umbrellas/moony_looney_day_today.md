@@ -14,7 +14,7 @@ jupyter:
 
 ```python
 def func():
-    return
+    return 
 ```
 
 ```python
@@ -29,4 +29,12 @@ for case in range(1,cases+1):
     answer = func()
     print(f"Case #{case}: {answer}")
 file_handle.close()
+```
+
+```python
+
+```
+
+```python
+
 ```

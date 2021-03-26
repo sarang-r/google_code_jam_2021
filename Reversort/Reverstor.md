@@ -18,34 +18,18 @@ def count_inv(numbers,size):
     
     # findsmallest number
     for i in range(0,size):
-#         print(numbers)
         minimum = i + 1
         argmin = numbers.index(minimum)
         numbers[i:argmin+1] = numbers[i:argmin+1][::-1]
         if i <= argmin+1:
             inv+=argmin +1  - i
-            print(argmin +1  - i)
         
 
     return inv - 1
 ```
 
 ```python
-def count_inv(numbers,size):
-    inv = 0
-    
-    # findsmallest number
-    for i in range(0,size):
-#         print(numbers)
-        minimum = i + 1
-        argmin = numbers.index(minimum)
-        numbers[i:argmin+1] = numbers[i:argmin+1][::-1]
-        if i <= argmin+1:
-            inv+=argmin +1  - i
-#             print(argmin +1  - i)
-        
-
-    return inv - 1#cases=int(input())
+#cases=int(input())
 file_name = "test1.txt"
 file_handle = open(file_name)  
 cases = int(next(file_handle))
