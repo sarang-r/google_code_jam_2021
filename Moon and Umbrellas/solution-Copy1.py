@@ -1,18 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.10.2
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
----
-
-```python
 def trim(string):
     # Cut all the '?' from beginning
     ind = 0
@@ -33,9 +18,7 @@ def trim(string):
         return string[:-ind+1]
     
     return string
-```
 
-```python
 def func(CJ_cost,JC_cost,string):
 #     print(string)
 #     print(trim(string))
@@ -53,22 +36,13 @@ def func(CJ_cost,JC_cost,string):
             elif left =="J":
                 cost+=JC_cost
                 
-        
-                
         ind+=1
     return cost
-```
 
-```python
-#cases=int(input())
-file_name = "test1.txt"
-file_handle = open(file_name)  
-cases = int(next(file_handle))
 
+cases=int(input())
 for case in range(1,cases+1):
-    nr1, nr2, string = next(file_handle).split()
+    nr1, nr2, string = input().split()
     CJ_cost, JC_cost = int(nr1), int(nr2)
     answer = func(CJ_cost,JC_cost,string)
     print(f"Case #{case}: {answer}")
-file_handle.close()
-```
