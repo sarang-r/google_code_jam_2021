@@ -19,7 +19,7 @@ def trim(string):
     while string[ind] =="?" and ind<len(string)-1:
         ind+=1
     string = string[ind:]
-    # Handle very specific corner cases of entire string being ???
+    # Handle very specific corner cases of entire string being '??????'
     if string =="?":
         return None
     
@@ -31,7 +31,6 @@ def trim(string):
         return string
     else :
         return string[:-ind+1]
-    
     return string
 ```
 
@@ -47,15 +46,20 @@ def func(CJ_cost,JC_cost,string):
     while ind < len(string)-1:
         left = string[ind]
         right = string[ind+1]
-        if left!=right:
-            if left == "C":
-                cost+=CJ_cost
-            elif left =="J":
-                cost+=JC_cost
-                
-        
-                
+        if right !="?":
+            if left!=right:
+                if left == "C":
+                    cost+=CJ_cost
+                elif left =="J":
+                    cost+=JC_cost
+        else:
+            while right=="?":
+                ind+=1
+                right = string[ind+1]
+            if left !=right:
+                cost+=min(CJ_cost,JC_cost)
         ind+=1
+        print(cost)
     return cost
 ```
 
@@ -71,4 +75,8 @@ for case in range(1,cases+1):
     answer = func(CJ_cost,JC_cost,string)
     print(f"Case #{case}: {answer}")
 file_handle.close()
+```
+
+```python
+
 ```
