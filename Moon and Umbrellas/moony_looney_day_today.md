@@ -57,9 +57,11 @@ def func(CJ_cost,JC_cost,string):
                 ind+=1
                 right = string[ind+1]
             if left !=right:
-                cost+=min(CJ_cost,JC_cost)
+                if left == "C":
+                    cost+=CJ_cost
+                elif left =="J":
+                    cost+=JC_cost
         ind+=1
-        print(cost)
     return cost
 ```
 
@@ -75,8 +77,4 @@ for case in range(1,cases+1):
     answer = func(CJ_cost,JC_cost,string)
     print(f"Case #{case}: {answer}")
 file_handle.close()
-```
-
-```python
-
 ```
