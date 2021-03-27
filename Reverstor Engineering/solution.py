@@ -8,9 +8,11 @@ def count_inv(numbers,size):
             inv+=argmin +1  - i
     return inv - 1
 
+def main_func(size,cost):
+    return 0
+
 cases=int(input())
 for case in range(1,cases+1):
-    size = int(input())
-    numbers = [int(i) for i in input().split()]
-    inv = count_inv(numbers,size)
-    print(f"Case #{case}: {inv}")
+    size, cost = map(int, (input()).split())
+    answer = main_func(size,cost)
+    print(f"Case #{case}: {answer}")

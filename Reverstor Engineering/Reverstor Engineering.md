@@ -27,21 +27,22 @@ def count_inv(numbers,size):
 ```
 
 ```python
+def main_func(size,cost):
+    return 0
+```
+
+```python
 #cases=int(input())
 file_name = "test1.txt"
 file_handle = open(file_name)  
 cases = int(next(file_handle))
 
 for case in range(1,cases+1):
-    size = int(next(file_handle))
-    numbers = [int(i) for i in next(file_handle).split()]
-    inv = count_inv(numbers,size)
-    print(f"Case #{case}: {inv}")
+    size, cost = map(int, (next(file_handle)).split())
+    answer = main_func(size,cost)
+    print(size,cost)
+    print(f"Case #{case}: {answer}")
 file_handle.close()
-```
-
-```python
-
 ```
 
 ```python
