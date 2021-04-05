@@ -29,10 +29,10 @@ def calculate_floor_value(list_2d):
             floor_swag+=person
 
 def check_if_finished(list_2d):
-    for row in ...:
-        if ...: return False
-    for column in ...:
-        if ...: return False
+    for row in list_2d:
+        if sum(i for i in row if i!=0)!=1 : return False
+    for column_coord in range(len(list_2d)):
+        if sum(i for i in row if i!=0)!=1 : return False
     return True
 
 
