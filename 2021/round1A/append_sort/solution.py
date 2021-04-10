@@ -65,4 +65,15 @@ def competition():
         print(f"Case #{case}: {main(array)}")
     file_handle.close()
 
-competition()
+if __name__=='__main__':
+    competition()
+    # print(f"{append(109,10)} should be (1000,2)")
+    # print(f"{append(153,153)} should be (1530,1)")
+    # print(f"{append(15,16)} should be (16,0)")
+    # print(f"{append(101,10)} should be (102,1)")
+
+
+    # print(f"{compare(101,10)} should be (102,1)")
+    # print(f"{compare(7,5)} should be (50,1)")
+    # print(f"{compare(109,10)} should be (1000,2)")
+    # print(f"{compare(193,19)} should be (194,1)")
