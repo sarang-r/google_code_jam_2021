@@ -32,20 +32,14 @@ def main(card_list):
     return 0
         
 def competition():
-    #cases=int(input())
-    file_name = "test1.txt"
-    file_handle = open(file_name)  
-    cases = int(next(file_handle))
+    cases=int(input())
     for case in range(1,cases+1):
         card_list = []
         card_list_2d = []
-        nr_of_different_primes= int(next(file_handle))
+        nr_of_different_primes = int(input())
         for i in range(nr_of_different_primes):
-            prime, nr_of_primes  = map(int,next(file_handle).split())
+            prime, nr_of_primes  = map(int,input().split())
             for i in range(nr_of_primes) : card_list.append(prime)
-            card_list_2d.append([prime, nr_of_primes])
         print(f"Case #{case}: {main(card_list)}")
-    file_handle.close()
 
-if __name__=='__main__':
-    competition()
+competition()
