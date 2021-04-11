@@ -1,14 +1,17 @@
-from itertools import permutations
+from itertools import combinations
 
-def split_generator(card_list):
+# def split_generator(card_list):
+#     pass
+#     # Get all possible combination for the first - and rest goes to the second
+#     # Iterate over length
+#     # Then Iterate over 
+#     for permutation in list(permutations(card_list)): # All the possible permutations
+#         for j in range(len(card_list)-1):
+#             yield (permutation[:j+1], permutation[j+1:])
+
+
+def print_split_generatorv2(card_list):
     pass
-    # Get all possible combination for the first - and rest goes to the second
-    # Iterate over length
-    # Then Iterate over 
-    for permutation in list(permutations(card_list)): # All the possible permutations
-        for j in range(len(card_list)-1):
-            yield (permutation[:j+1], permutation[j+1:])
-            
 
 def multiply_arr(arr):
     result = 1 
@@ -26,7 +29,7 @@ def check(split,rest):
 
 
 def main(card_list):
-    for split, rest in split_generator(card_list):
+    for split, rest in print_split_generatorv2(card_list):
         # print(split,rest)
         if check(split,rest): return check(split,rest)
     return 0
@@ -45,6 +48,8 @@ def competition():
             for i in range(nr_of_primes) : card_list.append(prime)
             card_list_2d.append([prime, nr_of_primes])
         print(f"Case #{case}: {main(card_list)}")
+        print_split_generator(card_list)
+        print()
     file_handle.close()
 
 if __name__=='__main__':
